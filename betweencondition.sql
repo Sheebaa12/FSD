@@ -1,0 +1,34 @@
+CREATE DATABASE EmployeeConditionnDB;
+USE EmployeeConditionnDB;
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    age INT,
+    salary INT
+);
+INSERT INTO employee VALUES
+(101, 'Rahul', 23, 22000),
+(102, 'Sneha', 26, 28000),
+(103, 'Karthik', 29, 32000),
+(104, 'Anu', 24, 26000),
+(105, 'Vijay', 27, 35000);
+SELECT * FROM employee
+WHERE salary BETWEEN 22000 AND 32000;
+SELECT * FROM employee
+WHERE salary BETWEEN 26000 AND 35000;
+SELECT * FROM employee
+WHERE age BETWEEN 23 AND 29;
+SELECT * FROM employee
+WHERE emp_id BETWEEN 101 AND 103;
+SELECT * FROM employee
+WHERE age BETWEEN 24 AND 27;
+SELECT * FROM employee
+WHERE salary NOT BETWEEN 22000 AND 32000;
+SELECT * FROM employee
+WHERE salary NOT BETWEEN 26000 AND 35000;
+SELECT * FROM employee
+WHERE age NOT BETWEEN 23 AND 29;
+SELECT * FROM employee
+WHERE emp_id NOT BETWEEN 101 AND 103;
+SELECT * FROM employee
+WHERE age NOT BETWEEN 24 AND 27;
